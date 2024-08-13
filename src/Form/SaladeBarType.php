@@ -12,9 +12,9 @@ class SaladeBarType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('titre')
-            ->add('ingredients')
-            ->add('prix')
+            ->add('title')
+            ->add('ingredient')
+            ->add('price')
         ;
     }
 

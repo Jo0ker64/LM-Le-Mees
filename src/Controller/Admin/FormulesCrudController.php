@@ -21,7 +21,7 @@ class FormulesCrudController extends AbstractCrudController
             IdField::new('id')->hideOnForm(),
             TextField::new('title'),
             TextField::new('ingredient'),
-            TextField::new('prix'),
+            TextField::new('price'),
         ];
     }
 }

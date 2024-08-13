@@ -14,51 +14,51 @@ class Gourmandises
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $titre = null;
+    private ?string $title = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $ingredients = null;
+    private ?string $ingredient = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $prix = null;
+    private ?string $price = null;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getTitre(): ?string
+    public function gettitle(): ?string
     {
-        return $this->titre;
+        return $this->title;
     }
 
-    public function setTitre(string $titre): static
+    public function settitle(string $title): static
     {
-        $this->titre = $titre;
+        $this->title = $title;
 
         return $this;
     }
 
-    public function getIngredients(): ?string
+    public function getingredient(): ?string
     {
-        return $this->ingredients;
+        return $this->ingredient;
     }
 
-    public function setIngredients(string $ingredients): static
+    public function setingredient(string $ingredient): static
     {
-        $this->ingredients = $ingredients;
+        $this->ingredient = $ingredient;
 
         return $this;
     }
 
-    public function getPrix(): ?string
+    public function getprice(): ?string
     {
-        return $this->prix;
+        return $this->price;
     }
 
-    public function setPrix(string $prix): static
+    public function setprice(string $price): static
     {
-        $this->prix = $prix;
+        $this->price = $price;
 
         return $this;
     }
