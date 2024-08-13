@@ -118,7 +118,18 @@ nav {
   display: block;
 }
 
+.facebook{
+  width: 50px; 
+  height: 50px;
+  background-image: url('../images/facebook.png'); 
+  background-size: contain;
+  display: inline-block;
+  transition: background-image 0.3s ease;
+}
 
+.facebook:hover {
+  background-image: url('../images/facebook_black.png'); 
+}
 
 
 /* ----------------------------------------Menu Hamburger Styles---------------------------------- */
@@ -297,7 +308,7 @@ nav {
 #contact {
   margin-bottom: 40px;
   padding: 50px 0;
-  background-image: url(../images/contact-bg.jpg) no-repaet center center;
+  background-image: url('../images/contact-bg.jpg') no-repaet center center;
 }
 
 #contact .section-heading h6 {
