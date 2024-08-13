@@ -1,78 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Mon Site Web{% endblock %}</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    {% block stylesheets %}{% endblock %}
-</head>
-<body>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Mon Site Web{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+        {% block stylesheets %}{% endblock %}
+
+    </head>
+
+    <body>
     <!-- En-tête du site -->
-    <header>
-        <nav>
-        <div class="navbar-logo">
-            <img src="{{ asset('assets/images/logo1.png') }}" alt="Logo">
-        </div>
-        <div class="navbar-links">
-            <a href="{{ path ('app_homepage') }}">Accueil</a>
-            <a href="#distributeur">Le distributeur à pizza</a>
-            <div class="dropdown">
-                <a href="{{ path('app_carte_index') }}" class="dropbtn">Carte</a>
-                <div class="dropdown-content">
-                    <a href="{{ path('app_carte_index') }}">Pizza</a>
-                    <a href="{{ path('app_carte_index') }}">Salade Bar</a>
-                    <a href="{{ path('app_carte_index') }}">Snacking</a>
-                    <a href="{{ path('app_carte_index') }}">Gourmandises</a>
-                    <a href="{{ path('app_carte_index') }}">Formules</a>
-                </div>
-            </div>
-            <a href="#contact">Contact</a>
-            <a href="https://www.facebook.com/profile.php?id=100075673855138&locale=fr_FR" target="_blank"
-                aria-label="Facebook">
-                <img src="{{ asset('assets/images/facebook.png') }}" alt="Facebook" class="facebook">
-            </a>
-            <a href="https://www.instagram.com/le_mees_lm/" target="_blank" aria-label="Instagram">
-                <img src="{{ asset('assets/images/instagram.png') }}" alt="Instagram" class="instagram">
-            </a>
-        </div>
-        <button class="navbar-toggle" id="navbar-toggle">
-            ☰
-        </button>
-    </nav>
-    </header>
+        {% include '_partials/header.html.twig' %}
 
     <!-- Contenu principal -->
-    <main>
+
         {% block body %}{% endblock %}
-    </main>
 
     <!-- Pied de page -->
-    <footer>
-        <div class="footer-content">
-            <div class="logo-container">
-                <img src="{{ asset('assets/images/logofooter.PNG') }}" alt="Logo" class="logo">
-            </div>
-            <div id="developer-name">
-                <a href="https://www.linkedin.com/in/jo064/" target="_blank" aria-label="Linkedin">
-                    <p>Jonathan Auroux Martel 2024 ©</p>
-                </a>
-            </div>
-            <div class="footer-links">
-                <ul>
-                    <li><a href="{{ path('mentions_legales') }}">Mentions légales</a></li>
-                    <li><a href="{{ path('cgu') }}">Conditions générales d'utilisation</a></li>
-                    <li><a href="{{ path('cgv') }}">Conditions générales de vente</a></li>
-                </ul>
-            </div>
-            <a href="#" class="scroll-to-top" aria-label="Retour en haut">
-                <img src="{{ asset('assets/images/flechehaut.png') }}" alt="Flèche pour revenir en haut">
-            </a>
-        </div>
-    </footer>
+        {% include '_partials/footer.html.twig' %}
 
-    <!-- Inclure les fichiers JavaScript -->
-   
-    {% block javascripts %}{% endblock %}
-</body>
+        <!-- Inclure les fichiers JavaScript -->
+        <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('assets/js/toggle.js')}}"></script>
+        {#<script src="{{ asset('assets/js/accordion.js')}}"></script>}#}
+        {% block javascripts %}{% endblock %}
+
+    </body>
+
 </html>

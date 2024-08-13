@@ -1,0 +1,23 @@
+    <footer>
+        <div class="footer-content">
+            <div class="logo-container">
+                <img src="{{asset('assets/images/logofooter.PNG') }}" alt="Logo" class="logo">
+            </div>
+            <div id="developer-name">
+                <a href="https://www.linkedin.com/in/jo064/" target="_blank" aria-label="Linkedin">
+                    <p>Jonathan Auroux Martel 2024 ©</p>
+                </a>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="{{ path('mentions_legales') }}">Mentions légales</a></li>
+                    <li><a href="{{ path('cgu') }}">Conditions générales d'utilisations</a></li>
+                    <li><a href="{{ path('cgv') }}">Conditions générales de ventes</a></li>
+                    <li><a href="{{ path('politic') }}">Politique de confidentialité</a></li>
+                </ul>
+            </div>
+            <a href="#" class="scroll-to-top" aria-label="Retour en haut">
+                <img src="{{ asset('assets/images/flèchehaut.png') }}" alt="Flèche pour revenir en haut">
+            </a>
+        </div>
+    </footer>

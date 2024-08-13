@@ -59,7 +59,7 @@ nav {
   align-items: center;
   padding: 20px;
   background-color: #fff;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap; 
 }
 
 .navbar-logo {
@@ -75,8 +75,8 @@ nav {
 .navbar-links {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center links horizontally */
-  flex: 2; /* Take twice the space of the logo */
+  justify-content: center; 
+  flex: 2; 
 }
 
 .navbar-links a {
@@ -187,7 +187,7 @@ nav {
   margin: 25px 0 10px;
 }
 
-/* Image Styles */
+/* -----------------------Image Styles -------------------------------*/
 .img {
   width: 100%;
   display: block;
@@ -437,8 +437,8 @@ footer {
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-  text-align: center; /* Center align text for better appearance on small screens */
+  flex-wrap: wrap; 
+  text-align: center; 
 }
 
 .social-links {
@@ -453,7 +453,7 @@ footer {
 
 .logo-container {
   text-align: center;
-  margin-bottom: 10px; /* Add some space below the logo */
+  margin-bottom: 10px; 
 }
 
 .logo {
@@ -476,8 +476,6 @@ footer {
   text-decoration: none;
 }
 
-
-
 #developer-name a {
   text-decoration: none;
   color: inherit;
@@ -485,49 +483,33 @@ footer {
   font-weight: 700;
 }
 
-/* Scroll to Top Button */
+
 .scroll-to-top {
   position: fixed;
-  bottom: 20px; /* Adjust the position to your preference */
-  right: 20px; /* Adjust the position to your preference */
+  bottom: 20px; 
+  right: 20px; 
   width: 40px;
   height: 40px;
-  z-index: 1000; /* Ensure it is on top of other elements */
+  z-index: 1000; 
 }
-
-
 
 /* -----------------------------------------------Style pour la carte------------------------------- */
-header {
-  font-family: 'vast shadow', sans-serif;
-  background-color: #E6AB26;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
 
-main {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px;
-}
-
-/* Style pour le conteneur de la catégorie */
 .category {
+  display: block;
   position: relative;
   width: 100%;
-  max-width: 800px; /* Largeur maximale pour la section */
-  margin: 0 auto; /* Centrer la section */
-  height: 400px; /* Hauteur de la section */
-  background-image: url('chemin/de/votre/image-de-fond.jpg'); /* Chemin vers l'image de fond */
-  background-size: cover; /* Couvre toute la section avec l'image */
-  background-position: center; /* Centre l'image */
-  background-repeat: no-repeat; /* Évite que l'image se répète */
-  border-radius: 10px; /* Coins arrondis */
-  overflow: hidden; /* Cache les débordements */
+  max-width: 800px; 
+  margin: 0 auto; 
+  height: 400px; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  margin-bottom: 20px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
-/* Superposition de l'image de fond avec un fond semi-transparent */
+
 .category .overlay {
   font-family: 'bioRhyme', sans-serif;
   position: absolute;
@@ -535,56 +517,43 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #E6AB263d; /* Fond noir semi-transparent */
-  color: #000; /* Couleur du texte */
-  padding: 20px; /* Espacement interne */
-  box-sizing: border-box; /* Inclure le padding et les bordures dans la largeur et hauteur */
+  background: #E6AB263d; 
+  color: #000; 
+  padding: 20px; 
+  box-sizing: border-box; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.category .separator {
-  width: 80%;
-  height: 5px; /* Épaisseur du trait */
-  background-color: #000; /* Couleur du trait */
-  margin: 10px auto; /* Centrer le trait et ajouter un espacement */
-  border-radius: 5px; /* Coins légèrement arrondis */
-}
-/* Styles pour le titre */
+
 .category h2 {
   font-family: 'bioRhyme', sans-serif;
   margin: 0;
-  font-size: 32px; /* Taille du titre */
+  font-size: 32px; 
   font-weight: 700;
   text-align: center;
 }
 
-/* Styles pour les éléments de la liste */
+
 .category ul {
-  list-style: none; /* Enlève les puces */
-  padding: 0; /* Enlève le padding */
-  margin: 0; /* Enlève la marge */
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
   text-align: center;
 }
 
-/* Styles pour chaque élément de la liste */
+
 .category li {
-  margin-bottom: 15px; /* Espace entre les éléments de la liste */
-  font-size: 14px; /* Taille du texte des éléments de la liste */
+  margin-bottom: 15px; 
+  font-size: 14px; 
 }
 
-/* Styles pour les éléments du texte */
-.category b {
-  color: #666; /* Couleur des prix */
-  font-weight: bold; /* Mettre en gras */
-}
 
-/* Styles pour les légendes en bas */
 .category p {
-  margin-top: 20px; /* Espacement entre les éléments de la liste et les légendes */
-  font-size: 14px; /* Taille du texte des légendes */
+  margin-top: 20px; 
+  font-size: 14px; 
   text-align: center;
 }
 

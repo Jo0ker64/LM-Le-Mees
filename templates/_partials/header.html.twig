@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="ingredient" content="Site vitrine de la boulangerie snacking LM Le Mées">
+		<meta name="author" content="Jonathan Auroux Martel">
+		<title>Le Mées LM</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+	</head>
+
+	<body>
+
+		{# ----------------------------------------------------NAVBAR---------------------------------------------------- #}
+		<nav>
+			<div class="navbar-logo">
+				<img src="{{ asset('assets/images/logo1.png') }}" alt="Logo">
+			</div>
+			<div class="navbar-links">
+				<a href=" {{ path('app_homepage') }} ">Accueil</a>
+				<a href=" {{ path('app_homepage') }}#distributeur ">Le distributeur à pizza</a>
+				<div class="dropdown">
+					<a href="{{ path('app_homepage') }}#carte" class="dropbtn">Carte</a>
+					<div class="dropdown-content">
+						<a href="{{ path('app_homepage') }}#carte">Pizza</a>
+						<a href="{{ path('app_homepage') }}#carte">Salade Bar</a>
+						<a href="{{ path('app_homepage') }}#carte">Snacking</a>
+						<a href="{{ path('app_homepage') }}#carte">Gourmandises</a>
+						<a href="{{ path('app_homepage') }}#carte">Formules</a>
+					</div>
+				</div>
+				<a href="{{ path('app_homepage') }}#contact">Contact</a>
+				<a href="https://www.facebook.com/profile.php?id=100075673855138&locale=fr_FR" target="_blank" aria-label="Facebook">
+					<img src="{{ asset('assets/images/facebook.png') }}" alt="Facebook">
+				</a>
+				<a href="https://www.instagram.com/le_mees_lm/" target="_blank" aria-label="Instagram">
+					<img src="{{ asset('assets/images/instagram.png') }}" alt="Instagram">
+				</a>
+			</div>
+			<button class="navbar-toggle" id="navbar-toggle">
+				☰
+			</button>
+		</nav>
+
+		{# ----------------------------------------------------BANNER---------------------------------------------------- #}
+		<div id="banner">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="left-content">
+							<div class="inner-content">
+								<h4>Le Mées</h4>
+								<h6>Le goût à portée de main</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8">
+						<div class="main-banner header-text">
+							<div class="Modern-Slider">
+								<div class="item">
+									<div class="img">
+										<img src="{{ asset('assets/images/salle.PNG') }}" alt="slide-01">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
