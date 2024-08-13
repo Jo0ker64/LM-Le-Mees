@@ -26,9 +26,10 @@
                 <h2>Salade Bar</h2>
                 <ul>
                     {% for salade in saladeBars %}
-                        <li>{{ salade.title }} : {{ salade.ingredient}} <b>{{ salade.price }}€</b></li>
+                        <li>{{ salade.title }} <br> {{ salade.ingredient}} <b>{{ salade.price }}€</b></li>
                     {% endfor %}
                 </ul>
+                <small> * Ingrédient supplémentaire : 0.50€</small>
             </div>
         </div>
 
