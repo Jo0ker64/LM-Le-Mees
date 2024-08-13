@@ -92,7 +92,7 @@
                             large éventail de délices.</p>
                         <p>Savourez nos pains frais, pizzas artisanales, sandwiches variés, paninis croustillants et
                             tacos
-                            gourmands, tous préparés avec des ingredients de qualité.</p>
+                            gourmands, tous préparés avec des ingredientde qualité.</p>
                         <p>Notre salade bar vous offre une sélection de crudités fraîches et de sauces maison pour
                             composer
                             votre salade sur mesure.</p>
@@ -308,6 +308,7 @@
                     <li><a href="{{ path('mentions_legales') }}">Mentions légales</a></li>
                     <li><a href="{{ path('cgu') }}">Conditions générales d'utilisations</a></li>
                     <li><a href="{{ path('cgv') }}">Conditions générales de ventes</a></li>
+                    <li><a href="{{ path('politic') }}">Politique de confidentialité</a></li>
                 </ul>
             </div>
             <a href="#" class="scroll-to-top" aria-label="Retour en haut">
@@ -316,6 +317,7 @@
         </div>
     </footer>
 
+    <script src="{{ asset ('assets/js/bootstrap.min.js') }}"></script>
     <script>
         document.getElementById('navbar-toggle').addEventListener('click', function () {
             document.querySelector('.navbar-links').classList.toggle('active');

@@ -1,14 +1,62 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block title %}Mentions Légales{% endblock %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="ingredient" content="Site vitrine de la boulangerie snacking LM Le Mées">
+    <meta name="author" content="Jonathan Auroux Martel">
+    <title>Le Mées LM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+</head>
 
-{% block body %}
+<body>
+
+    {# ----------------------------------------------------NAVBAR---------------------------------------------------- #}
+    <nav>
+        <div class="navbar-logo">
+            <img src="{{ asset('assets/images/logo1.png') }}" alt="Logo">
+        </div>
+        <div class="navbar-links">
+            <a href="">Accueil</a>
+            <a href="#distributeur">Le distributeur à pizza</a>
+            <div class="dropdown">
+                <a href="{{ path('app_carte_index') }}" class="dropbtn">Carte</a>
+                <div class="dropdown-content">
+                    <a href="{{ path('app_carte_index') }}">Pizza</a>
+                    <a href="{{ path('app_carte_index') }}">Salade Bar</a>
+                    <a href="{{ path('app_carte_index') }}">Snacking</a>
+                    <a href="{{ path('app_carte_index') }}">Gourmandises</a>
+                    <a href="{{ path('app_carte_index') }}">Formules</a>
+                </div>
+            </div>
+            <a href="#contact">Contact</a>
+            <a href="https://www.facebook.com/profile.php?id=100075673855138&locale=fr_FR" target="_blank"
+                aria-label="Facebook">
+                <img src="{{ asset('assets/images/facebook.png') }}" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/le_mees_lm/" target="_blank" aria-label="Instagram">
+                <img src="{{ asset('assets/images/instagram.png') }}" alt="Instagram">
+            </a>
+        </div>
+        <button class="navbar-toggle" id="navbar-toggle">
+            ☰
+        </button>
+    </nav>
+
+    {# ----------------------------------------------------MAIN---------------------------------------------------- #}
+
 <section class="section">
         <div class="container">
-            <div class="row">
+            <div class="row"> 
                 <div class="col-lg-12">
                     <div class="section-heading">
-                        <h5>1. Éditeur du site :</h5>
+                        <h3 class="static">Mentions légales</h3>
+                        <h5 class="static">1. Éditeur du site :</h5>
                         <p> Nom de la société : Le Mées LM <br>
                             Forme juridique : SAS <br>
                             Capital social : 1 000€ <br>
@@ -59,4 +107,38 @@
             </div>
         </div>
     </section>
-{% endblock %}
+    
+    {# ----------------------------------------------------FOOTER---------------------------------------------------- #}
+    <footer>
+        <div class="footer-content">
+            <div class="logo-container">
+                <img src="{{asset ('assets/images/logofooter.PNG') }}" alt="Logo" class="logo">
+            </div>
+            <div id="developer-name">
+                <a href="https://www.linkedin.com/in/jo064/" target="_blank" aria-label="Linkedin">
+                    <p>Jonathan Auroux Martel 2024 ©</p>
+                </a>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="{{ path('mentions_legales') }}">Mentions légales</a></li>
+                    <li><a href="{{ path('cgu') }}">Conditions générales d'utilisations</a></li>
+                    <li><a href="{{ path('cgv') }}">Conditions générales de ventes</a></li>
+                    <li><a href="{{ path('politic') }}">Politique de confidentialité</a></li>
+                </ul>
+            </div>
+            <a href="#" class="scroll-to-top" aria-label="Retour en haut">
+                <img src="{{ asset ('assets/images/flèchehaut.png') }}" alt="Flèche pour revenir en haut">
+            </a>
+        </div>
+    </footer>
+
+    <script src="{{ asset ('assets/js/bootstrap.min.js') }}"></script>
+    <script>
+        document.getElementById('navbar-toggle').addEventListener('click', function () {
+            document.querySelector('.navbar-links').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

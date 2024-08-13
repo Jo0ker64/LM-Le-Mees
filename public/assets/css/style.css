@@ -21,7 +21,6 @@ body {
   box-sizing: border-box;
 }
 
-
 /* General Section Styles */
 section {
   margin: 50px auto;
@@ -308,7 +307,7 @@ nav {
 #contact {
   margin-bottom: 40px;
   padding: 50px 0;
-  background-image: url('../images/contact-bg.jpg') no-repaet center center;
+  background-image: url('assets/images/conact-bg.jpg') no-repaet center center;
 }
 
 #contact .section-heading h6 {
@@ -590,6 +589,3 @@ main {
 }
 
 
-
-
-  

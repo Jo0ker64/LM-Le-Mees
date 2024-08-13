@@ -1,10 +1,55 @@
-{% extends 'base.html.twig' %}
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('assets/css/stylecarte.css') }}">
-{% endblock %}
-{% block title %}Carte{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block body %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="ingredient" content="Site vitrine de la boulangerie snacking LM Le Mées">
+    <meta name="author" content="Jonathan Auroux Martel">
+    <title>Le Mées LM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+</head>
+
+<body>
+
+    {# ----------------------------------------------------NAVBAR---------------------------------------------------- #}
+    <nav>
+        <div class="navbar-logo">
+            <img src="{{ asset('assets/images/logo1.png') }}" alt="Logo">
+        </div>
+        <div class="navbar-links">
+            <a href="">Accueil</a>
+            <a href="#distributeur">Le distributeur à pizza</a>
+            <div class="dropdown">
+                <a href="{{ path('app_carte_index') }}" class="dropbtn">Carte</a>
+                <div class="dropdown-content">
+                    <a href="{{ path('app_carte_index') }}">Pizza</a>
+                    <a href="{{ path('app_carte_index') }}">Salade Bar</a>
+                    <a href="{{ path('app_carte_index') }}">Snacking</a>
+                    <a href="{{ path('app_carte_index') }}">Gourmandises</a>
+                    <a href="{{ path('app_carte_index') }}">Formules</a>
+                </div>
+            </div>
+            <a href="#contact">Contact</a>
+            <a href="https://www.facebook.com/profile.php?id=100075673855138&locale=fr_FR" target="_blank"
+                aria-label="Facebook">
+                <img src="{{ asset('assets/images/facebook.png') }}" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/le_mees_lm/" target="_blank" aria-label="Instagram">
+                <img src="{{ asset('assets/images/instagram.png') }}" alt="Instagram">
+            </a>
+        </div>
+        <button class="navbar-toggle" id="navbar-toggle">
+            ☰
+        </button>
+    </nav>
+
+    {# ----------------------------------------------------MAIN---------------------------------------------------- #}
+
 
     <main>
         <div class="category">
@@ -12,7 +57,7 @@
                 <h2>Les formules</h2>
                 <ul>
                     {% for formule in formules %}
-                        <li>{{ formule.title }} : {{ formule.ingredients }} <b>{{ formule.price }}€</b></li>
+                        <li>{{ formule.title }} : {{ formule.ingredient}} <b>{{ formule.price }}€</b></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -23,7 +68,7 @@
                 <h2>Salade Bar</h2>
                 <ul>
                     {% for salade in saladeBars %}
-                        <li>{{ salade.title }} : {{ salade.ingredients }} <b>{{ salade.price }}€</b></li>
+                        <li>{{ salade.title }} : {{ salade.ingredient}} <b>{{ salade.price }}€</b></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -34,7 +79,7 @@
                 <h2>Snacking</h2>
                 <ul>
                     {% for snack in snackings %}
-                        <li>{{ snack.title }} : {{ snack.ingredients }} <b>{{ snack.price }}€</b></li>
+                        <li>{{ snack.title }} : {{ snack.ingredient}} <b>{{ snack.price }}€</b></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -45,7 +90,7 @@
                 <h2>Pizzas base tomate</h2>
                 <ul>
                     {% for pizzaTomate in pizzaTomates %}
-                        <li>{{ pizzaTomate.title }} : {{ pizzaTomate.ingredients }} <b>{{ pizzaTomate.price }}€</b></li>
+                        <li>{{ pizzaTomate.title }} : {{ pizzaTomate.ingredient}} <b>{{ pizzaTomate.price }}€</b></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -56,7 +101,7 @@
                 <h2>Pizzas base crème</h2>
                 <ul>
                     {% for pizzaCreme in pizzaCremes %}
-                        <li>{{ pizzaCreme.title }} : {{ pizzaCreme.ingredients }} <b>{{ pizzaCreme.price }}€</b></li>
+                        <li>{{ pizzaCreme.title }} : {{ pizzaCreme.ingredient}} <b>{{ pizzaCreme.price }}€</b></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -67,7 +112,7 @@
                 <h2>Pizzas chef</h2>
                 <ul>
                     {% for pizzaChef in pizzaChefs %}
-                        <li>{{ pizzaChef.title }} : {{ pizzaChef.ingredients }} <b>{{ pizzaChef.price }}€</b></li>
+                        <li>{{ pizzaChef.title }} : {{ pizzaChef.ingredient}} <b>{{ pizzaChef.price }}€</b></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -85,4 +130,37 @@
         </div>
     </main>
 
-{% endblock %}
+{# ----------------------------------------------------FOOTER---------------------------------------------------- #}
+    <footer>
+        <div class="footer-content">
+            <div class="logo-container">
+                <img src="{{asset ('assets/images/logofooter.PNG') }}" alt="Logo" class="logo">
+            </div>
+            <div id="developer-name">
+                <a href="https://www.linkedin.com/in/jo064/" target="_blank" aria-label="Linkedin">
+                    <p>Jonathan Auroux Martel 2024 ©</p>
+                </a>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="{{ path('mentions_legales') }}">Mentions légales</a></li>
+                    <li><a href="{{ path('cgu') }}">Conditions générales d'utilisations</a></li>
+                    <li><a href="{{ path('cgv') }}">Conditions générales de ventes</a></li>
+                    <li><a href="{{ path('politic') }}">Politique de confidentialité</a></li>
+                </ul>
+            </div>
+            <a href="#" class="scroll-to-top" aria-label="Retour en haut">
+                <img src="{{ asset ('assets/images/flèchehaut.png') }}" alt="Flèche pour revenir en haut">
+            </a>
+        </div>
+    </footer>
+
+    <script src="{{ asset ('assets/js/bootstrap.min.js') }}"></script>
+    <script>
+        document.getElementById('navbar-toggle').addEventListener('click', function () {
+            document.querySelector('.navbar-links').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

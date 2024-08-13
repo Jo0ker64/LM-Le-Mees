@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Mon Site Web{% endblock %}</title>
-    
-    <!-- Inclure le fichier CSS principal -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    
-    <!-- Inclure d'autres fichiers CSS si nécessaire -->
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
