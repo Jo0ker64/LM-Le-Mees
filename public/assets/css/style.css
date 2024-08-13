@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&family=Vast+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  font-family: "arial", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* General Section Styles */
+section {
+  margin: 50px auto;
+  background: #E6AB263d;
+  width: 80%;
+  max-width: 1200px;
+  padding: 20px;
+  border: 2px solid #E6AB263d;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-heading h6 {
+  font-family: 'peralta', sans-serif;
+  position: relative;
+  font-size: 24px;
+  color: #E6AB26;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-left: 40px;
+}
+
+.section-heading h2 {
+  font-family: 'bioRhyme', sans-serif;
+  line-height: 30px;
+  margin: 20px 0 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.navbar-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-logo img {
+  width: 300px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center links horizontally */
+  flex: 2; /* Take twice the space of the logo */
+}
+
+.navbar-links a {
+  font-family: 'Peralta', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #E6AB26;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.navbar-links a:hover {
+  color: #666;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #E6AB26;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+/* ----------------------------------------Menu Hamburger Styles---------------------------------- */
+.navbar-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #E6AB26;
+}
+
+/* ------------------------------------------Banner Styles------------------------------------- */
+#banner {
+  padding-top: 20px;
+}
+
+#banner .col-lg-4,
+#banner .col-lg-8 {
+  padding: 0;
+}
+
+#banner .left-content {
+  background-color: #E6AB26;
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+#banner .left-content .inner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#banner .left-content h4 {
+  font-family: 'vast shadow', sans-serif;
+  color: #fff;
+  font-size: 65px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+#banner .left-content h6 {
+  font-family: 'bioRhyme', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 3px;
+  margin-top: 5px;
+}
+
+#banner .left-content .main-white-button {
+  margin: 25px 0 10px;
+}
+
+/* Image Styles */
+.img {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.img img {
+  min-height: 100%;
+  min-width: 100%;
+  position: relative;
+  display: inline-block;
+  max-width: none;
+}
+
+.Modern-Slider .item .img {
+  height: 400px;
+  max-height: 100%;
+  overflow: hidden;
+}
+/* --------------------------------------------À propos Styles ------------------------------------------*/
+#about {
+  padding: 50px 0;
+}
+
+#about p {
+  font-family: 'bioRhyme', sans-serif;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+#about h3 {
+  font-family: 'bioRhyme', sans-serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+
+/*-------------------------------------------- Distributeur Styles ------------------------------------------*/
+#distributeur {
+  padding: 50px 0;
+}
+
+#distributeur img {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#distributeur .left-text-content h2 {
+  font-size: 20px ;
+}
+
+#distributeur .left-text-content p {
+  font-family: 'bioRhyme', sans-serif;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+#distributeur .right-content {
+  margin-left: 30px;
+}
+
+/* ---------------------------------------------Carte Accordion Styles ------------------------------------- */
+#carte {
+  padding: 50px 0;
+}
+
+#accordion {
+  margin-top: 10px;
+  width: 80%;
+  margin: 30px auto;
+  height: 380px;
+  display: flex;
+  overflow: hidden;
+  border: 2px solid #E6AB263d;
+  border-radius: 10px;
+}
+
+.accordion {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.accordion-item {
+  flex: 1;
+  transition: flex 0.5s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.accordion-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.accordion-item:hover {
+  flex: 8;
+}
+
+.text-overlay {
+  font-family: 'bioRhyme', sans-serif;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------------------------------------Contact Styles------------------------------------------------ */
+#contact {
+  margin-bottom: 40px;
+  padding: 50px 0;
+  background-image: url(../images/contact-bg.jpg) no-repaet center center;
+}
+
+#contact .section-heading h6 {
+  color: #E6AB26;
+}
+
+#contact p {
+  font-family: 'bioRhyme', sans-serif;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 65px;
+}
+
+#contact .phone,
+#contact .adress,
+#contact .time {
+  text-align: center;
+  padding: 20px;
+}
+
+#contact .phone i,
+#contact .adress i,
+#contact .time i {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  line-height: 70px;
+  color: #fff;
+  background-color: #E6AB26;
+  border-radius: 50%;
+  font-size: 24px;
+  margin-top: -35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contact .phone h4,
+#contact .adress h4,
+#contact .time h4 {
+  font-family: 'bioRhyme', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 15px 0 10px;
+  color: #fff;
+}
+
+#contact .phone span,
+#contact .adress span,
+#contact .time span {
+  font-family: 'bioRhyme', sans-serif;
+  font-size: 14px;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#contact .phone span:hover,
+#contact .adress span:hover,
+#contact .time span:hover {
+  color: #E6AB26;
+}
+
+.contact-form h4 {
+  font-size: 24px;
+  font-family: 'peralta', sans-serif;
+  color: #E6AB26;
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  font-family: 'bioRhyme', sans-serif;
+  color: #666;
+  font-size: 14px;
+  border: 1px solid #E6AB263d;
+  background-color: #fff;
+  width: 100%;
+  height: 46px;
+  border-radius: 5px;
+  outline: none;
+  padding: 3px 20px;
+  appearance: none;
+  margin-bottom: 15px;
+}
+
+.contact-form button {
+  font-family: 'bioRhyme', sans-serif;
+  font-size: 13px;
+  color: #fff;
+  background-color: #E6AB26;
+  padding: 12px 25px;
+  width: 100%;
+  border: none;
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+  padding: 20px;
+}
+
+#map {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -----------------------------------------------Footer Styles --------------------------------------------------*/
+footer {
+  font-family: 'bioRhyme', sans-serif;
+  background-color: #E6AB26;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  text-align: center; /* Center align text for better appearance on small screens */
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 10px; /* Add some space below the logo */
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+#developer-name a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px; /* Adjust the position to your preference */
+  right: 20px; /* Adjust the position to your preference */
+  width: 40px;
+  height: 40px;
+  z-index: 1000; /* Ensure it is on top of other elements */
+}
+
+
+
+/* -----------------------------------------------Style pour la carte------------------------------- */
+header {
+  font-family: 'vast shadow', sans-serif;
+  background-color: #E6AB26;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+/* Style pour le conteneur de la catégorie */
+.category {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Largeur maximale pour la section */
+  margin: 0 auto; /* Centrer la section */
+  height: 400px; /* Hauteur de la section */
+  background-image: url('chemin/de/votre/image-de-fond.jpg'); /* Chemin vers l'image de fond */
+  background-size: cover; /* Couvre toute la section avec l'image */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat; /* Évite que l'image se répète */
+  border-radius: 10px; /* Coins arrondis */
+  overflow: hidden; /* Cache les débordements */
+}
+
+/* Superposition de l'image de fond avec un fond semi-transparent */
+.category .overlay {
+  font-family: 'bioRhyme', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #E6AB263d; /* Fond noir semi-transparent */
+  color: #000; /* Couleur du texte */
+  padding: 20px; /* Espacement interne */
+  box-sizing: border-box; /* Inclure le padding et les bordures dans la largeur et hauteur */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.category .separator {
+  width: 80%;
+  height: 5px; /* Épaisseur du trait */
+  background-color: #000; /* Couleur du trait */
+  margin: 10px auto; /* Centrer le trait et ajouter un espacement */
+  border-radius: 5px; /* Coins légèrement arrondis */
+}
+/* Styles pour le titre */
+.category h2 {
+  font-family: 'bioRhyme', sans-serif;
+  margin: 0;
+  font-size: 32px; /* Taille du titre */
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Styles pour les éléments de la liste */
+.category ul {
+  list-style: none; /* Enlève les puces */
+  padding: 0; /* Enlève le padding */
+  margin: 0; /* Enlève la marge */
+  text-align: center;
+}
+
+/* Styles pour chaque élément de la liste */
+.category li {
+  margin-bottom: 15px; /* Espace entre les éléments de la liste */
+  font-size: 14px; /* Taille du texte des éléments de la liste */
+}
+
+/* Styles pour les éléments du texte */
+.category b {
+  color: #666; /* Couleur des prix */
+  font-weight: bold; /* Mettre en gras */
+}
+
+/* Styles pour les légendes en bas */
+.category p {
+  margin-top: 20px; /* Espacement entre les éléments de la liste et les légendes */
+  font-size: 14px; /* Taille du texte des légendes */
+  text-align: center;
+}
+
+
+
+
+  

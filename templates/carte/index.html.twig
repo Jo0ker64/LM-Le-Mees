@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/stylecarte.css') }}">
+{% endblock %}
+{% block title %}Carte{% endblock %}
+
+{% block body %}
+
+    <main>
+        <div class="category">
+            <div class="overlay">
+                <h2>Les formules</h2>
+                <ul>
+                    {% for formule in formules %}
+                        <li>{{ formule.title }} : {{ formule.ingrédients }} <b>{{ formule.prix }}€</b></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="overlay">
+                <h2>Salade Bar</h2>
+                <ul>
+                    {% for salade in saladeBars %}
+                        <li>{{ salade.title }} : {{ salade.ingrédients }} <b>{{ salade.prix }}€</b></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="overlay">
+                <h2>Snacking</h2>
+                <ul>
+                    {% for snack in snackings %}
+                        <li>{{ snack.title }} : {{ snack.ingrédients }} <b>{{ snack.prix }}€</b></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="overlay">
+                <h2>Pizzas base tomate</h2>
+                <ul>
+                    {% for pizzaTomate in pizzaTomates %}
+                        <li>{{ pizzaTomate.title }} : {{ pizzaTomate.ingrédients }} <b>{{ pizzaTomate.prix }}€</b></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="overlay">
+                <h2>Pizzas base crème</h2>
+                <ul>
+                    {% for pizzaCreme in pizzaCremes %}
+                        <li>{{ pizzaCreme.title }} : {{ pizzaCreme.ingrédients }} <b>{{ pizzaCreme.prix }}€</b></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="overlay">
+                <h2>Pizzas chef</h2>
+                <ul>
+                    {% for pizzaChef in pizzaChefs %}
+                        <li>{{ pizzaChef.title }} : {{ pizzaChef.ingrédients }} <b>{{ pizzaChef.prix }}€</b></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="overlay">
+                <h2>Gourmandises</h2>
+                <ul>
+                    {% for gourmandise in gourmandises %}
+                        <li>{{ gourmandise.title }} <b>{{ gourmandise.prix }}€</b></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

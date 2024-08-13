@@ -1,0 +1,92 @@
+/* -----------------------------------------------Style pour la carte------------------------------- */
+header {
+    font-family: 'vast shadow', sans-serif;
+    background-color: #E6AB26;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+  }
+  
+  /* Style pour le conteneur de la catégorie */
+  .category {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Largeur maximale pour la section */
+    margin: 0 auto; /* Centrer la section */
+    height: 400px; /* Hauteur de la section */
+    background-image: url('chemin/de/votre/image-de-fond.jpg'); /* Chemin vers l'image de fond */
+    background-size: cover; /* Couvre toute la section avec l'image */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Évite que l'image se répète */
+    border-radius: 10px; /* Coins arrondis */
+    overflow: hidden; /* Cache les débordements */
+  }
+  
+  /* Superposition de l'image de fond avec un fond semi-transparent */
+  .category .overlay {
+    font-family: 'bioRhyme', sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #E6AB263d; /* Fond noir semi-transparent */
+    color: #000; /* Couleur du texte */
+    padding: 20px; /* Espacement interne */
+    box-sizing: border-box; /* Inclure le padding et les bordures dans la largeur et hauteur */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .category .separator {
+    width: 80%;
+    height: 5px; /* Épaisseur du trait */
+    background-color: #000; /* Couleur du trait */
+    margin: 10px auto; /* Centrer le trait et ajouter un espacement */
+    border-radius: 5px; /* Coins légèrement arrondis */
+  }
+  /* Styles pour le titre */
+  .category h2 {
+    font-family: 'bioRhyme', sans-serif;
+    margin: 0;
+    font-size: 32px; /* Taille du titre */
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  /* Styles pour les éléments de la liste */
+  .category ul {
+    list-style: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding */
+    margin: 0; /* Enlève la marge */
+    text-align: center;
+  }
+  
+  /* Styles pour chaque élément de la liste */
+  .category li {
+    margin-bottom: 15px; /* Espace entre les éléments de la liste */
+    font-size: 14px; /* Taille du texte des éléments de la liste */
+  }
+  
+  /* Styles pour les éléments du texte */
+  .category b {
+    color: #666; /* Couleur des prix */
+    font-weight: bold; /* Mettre en gras */
+  }
+  
+  /* Styles pour les légendes en bas */
+  .category p {
+    margin-top: 20px; /* Espacement entre les éléments de la liste et les légendes */
+    font-size: 14px; /* Taille du texte des légendes */
+    text-align: center;
+  }
+  
+  
