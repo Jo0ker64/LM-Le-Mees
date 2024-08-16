@@ -5,7 +5,7 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}Mon Site Web{% endblock %}</title>
+        <title>{% block title %}LM Le Mées{% endblock %}</title>
         <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
         {% block stylesheets %}{% endblock %}
 
@@ -24,9 +24,13 @@
 
         <!-- Inclure les fichiers JavaScript -->
         <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('assets/js/toggle.js')}}"></script>
-        {#<script src="{{ asset('assets/js/accordion.js')}}"></script>}#}
-        {% block javascripts %}{% endblock %}
+
+        {# <script>
+            document.getElementById('navbar-toggle').addEventListener('click', function () {
+            document.querySelector('.navbar-links').classList.toggle('active');
+            });
+        </script>#}
+        {% block javascripts %}{% endblock %}
 
     </body>
 

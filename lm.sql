@@ -38,18 +38,15 @@ CREATE TABLE `doctrine_migration_versions` (
 --
 
 INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES
-('DoctrineMigrations\\Version20240813073910', '2024-08-13 07:39:37', 74),
-('DoctrineMigrations\\Version20240813154702', '2024-08-13 15:47:11', 96),
-('DoctrineMigrations\\Version20240813154926', '2024-08-13 15:49:29', 46),
-('DoctrineMigrations\\Version20240813155100', '2024-08-13 15:51:02', 43);
+
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `formules`
+-- Table structure for table `Formule`
 --
 
-CREATE TABLE `formules` (
+CREATE TABLE `Formule` (
   `id` int NOT NULL,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `ingredient` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -57,10 +54,10 @@ CREATE TABLE `formules` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `formules`
+-- Dumping data for table `Formule`
 --
 
-INSERT INTO `formules` (`id`, `title`, `ingredient`, `price`) VALUES
+INSERT INTO `Formule` (`id`, `title`, `ingredient`, `price`) VALUES
 (1, 'Formule S Snacking', 'Un snacking * au choix et une boisson', '7,50 €'),
 (2, 'Formule S Salade', 'Une salade * au choix  et une boisson', '10,50 €'),
 (3, 'Formule M Snacking', 'Un snacking * au choix avec une boisson et un dessert', '10,50 €'),
@@ -236,9 +233,9 @@ ALTER TABLE `doctrine_migration_versions`
   ADD PRIMARY KEY (`version`);
 
 --
--- Indexes for table `formules`
+-- Indexes for table `Formule`
 --
-ALTER TABLE `formules`
+ALTER TABLE `Formule`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -291,9 +288,9 @@ ALTER TABLE `snacking`
 --
 
 --
--- AUTO_INCREMENT for table `formules`
+-- AUTO_INCREMENT for table `Formule`
 --
-ALTER TABLE `formules`
+ALTER TABLE `Formule`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --

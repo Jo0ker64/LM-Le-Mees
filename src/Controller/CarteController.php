@@ -2,21 +2,21 @@
 
 namespace App\Controller;
 
-use App\Entity\Formules;
+use App\Entity\Formule;
 use App\Entity\Gourmandises;
 use App\Entity\PizzaChef;
 use App\Entity\PizzaCreme;
 use App\Entity\PizzaTomate;
 use App\Entity\SaladeBar;
 use App\Entity\Snacking;
-use App\Form\FormulesType;
+use App\Form\FormuleType;
 use App\Form\GourmandisesType;
 use App\Form\PizzaChefType;
 use App\Form\PizzaCremeType;
 use App\Form\PizzaTomateType;
 use App\Form\SaladeBarType;
 use App\Form\SnackingType;
-use App\Repository\FormulesRepository;
+use App\Repository\FormuleRepository;
 use App\Repository\GourmandisesRepository;
 use App\Repository\PizzaChefRepository;
 use App\Repository\PizzaCremeRepository;
@@ -41,7 +41,7 @@ class CarteController extends AbstractController
 
     #[Route('/', name: '_index')]
     public function index(
-        FormulesRepository $formulesRepository,
+        FormuleRepository $FormuleRepository,
         GourmandisesRepository $gourmandisesRepository,
         PizzaChefRepository $pizzaChefRepository,
         PizzaCremeRepository $pizzaCremeRepository,
@@ -50,7 +50,7 @@ class CarteController extends AbstractController
         SnackingRepository $snackingRepository
     ): Response {
         return $this->render('carte/index.html.twig', [
-            'formules' => $formulesRepository->findAll(),
+            'Formule' => $FormuleRepository->findAll(),
             'gourmandises' => $gourmandisesRepository->findAll(),
             'pizzaChefs' => $pizzaChefRepository->findAll(),
             'pizzaCremes' => $pizzaCremeRepository->findAll(),
@@ -60,14 +60,14 @@ class CarteController extends AbstractController
         ]);
     }
 
-    #[Route('/formules', name: '_formules_index')]
-    public function formulesIndex(FormulesRepository $repository): Response
+    #[Route('/Formule', name: '_Formule_index')]
+    public function FormuleIndex(FormuleRepository $repository): Response
     {
         $items = $repository->findAll();
 
         return $this->render('carte/index.html.twig', [
             'items' => $items,
-            'type' => 'Formules'
+            'type' => 'Formule'
         ]);
     }
 
@@ -138,23 +138,23 @@ class CarteController extends AbstractController
     }
 
     // New actions
-    #[Route('/formules/new', name: '_formules_new')]
-    public function formulesNew(Request $request): Response
+    #[Route('/Formule/new', name: '_Formule_new')]
+    public function FormuleNew(Request $request): Response
     {
-        $item = new Formules();
-        $form = $this->createForm(FormulesType::class, $item);
+        $item = new Formule();
+        $form = $this->createForm(FormuleType::class, $item);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $this->entityManager->persist($item);
             $this->entityManager->flush();
 
-            return $this->redirectToRoute('app_carte_formules_index');
+            return $this->redirectToRoute('app_carte_Formule_index');
         }
 
         return $this->render('carte/new.html.twig', [
             'form' => $form->createView(),
-            'type' => 'Formules'
+            'type' => 'Formule'
         ]);
     }
 

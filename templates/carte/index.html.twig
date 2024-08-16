@@ -10,14 +10,14 @@
     <main>
         <div class="category">
             <div class="overlay">
-                <h2>Les formules</h2>
+                <h2>Les Formule</h2>
                 <ul>
-                    {% for formule in formules %}
-                        <li>{{ formule.title }} : {{ formule.ingredient}} <b>{{ formule.price }}€</b></li>
+                    {% for Formule in Formule %}
+                        <li>{{ Formule.title }} : {{ Formule.ingredient}} <b>{{ Formule.price }}€</b></li>
                     {% endfor %}
                 </ul>
-                <small>* Snacking : Sandwich, Paninis, Tacos, Wrap, Burger</small>
-                <small>* Salade : Salade composée, poké-ball, salade du jour</small>
+                <h6 class="small">* Snacking : Sandwich, Paninis, Tacos, Wrap, Burger</h6>
+                <h6 class="small">* Salade : Salade composée, poké-ball, salade du jour</h6>
             </div>
         </div>
 
@@ -29,7 +29,7 @@
                         <li>{{ salade.title }} <br> {{ salade.ingredient}} <b>{{ salade.price }}€</b></li>
                     {% endfor %}
                 </ul>
-                <small> * Ingrédient supplémentaire : 0.50€</small>
+                <h6 class="small"> * Ingrédient supplémentaire : 0.50€</h6>
             </div>
         </div>
 

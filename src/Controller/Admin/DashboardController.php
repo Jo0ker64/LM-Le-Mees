@@ -2,7 +2,7 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Formules;
+use App\Entity\Formule;
 use App\Entity\Snacking;
 use App\Entity\PizzaChef;
 use App\Entity\SaladeBar;
@@ -11,7 +11,7 @@ use App\Entity\PizzaTomate;
 use App\Entity\Gourmandises;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Controller\Admin\FormulesCrudController;
+use App\Controller\Admin\FormuleCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
@@ -23,7 +23,7 @@ class DashboardController extends AbstractDashboardController
     public function index(): Response
     {
         $adminUrlGenrator = $this->container->get(AdminUrlGenerator::class);
-        return $this->redirect($adminUrlGenrator->setController(FormulesCrudController::class)->generateUrl());
+        return $this->redirect($adminUrlGenrator->setController(FormuleCrudController::class)->generateUrl());
     }
 
     public function configureDashboard(): Dashboard
@@ -51,7 +51,7 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linkToCrud('Formules', 'fa fa-cutlery', Formules::class);
+        yield MenuItem::linkToCrud('Formule', 'fa fa-cutlery', Formule::class);
         yield MenuItem::linkToCrud('Gourmandises', 'fa fa-birthday-cake', Gourmandises::class);
         yield MenuItem::linkToCrud('PizzaCreme', 'fas fa-pizza-slice', PizzaCreme::class);
         yield MenuItem::linkToCrud('PizzaChef', 'fas fa-pizza-slice', PizzaChef::class);

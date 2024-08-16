@@ -2,12 +2,12 @@
 
 namespace App\Form;
 
-use App\Entity\Formules;
+use App\Entity\Formule;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class FormulesType extends AbstractType
+class FormuleType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
@@ -21,7 +21,7 @@ class FormulesType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Formules::class,
+            'data_class' => Formule::class,
         ]);
     }
 }

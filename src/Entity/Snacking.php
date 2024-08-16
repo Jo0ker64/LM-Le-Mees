@@ -27,36 +27,36 @@ class Snacking
         return $this->id;
     }
 
-    public function gettitle(): ?string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
 
-    public function settitle(string $title): static
+    public function setTitle(string $title): static
     {
         $this->title = $title;
 
         return $this;
     }
 
-    public function getingredient(): ?string
+    public function getIngredient(): ?string
     {
         return $this->ingredient;
     }
 
-    public function setingredient(string $ingredient): static
+    public function setIngredient(string $ingredient): static
     {
         $this->ingredient = $ingredient;
 
         return $this;
     }
 
-    public function getprice(): ?string
+    public function getPrice(): ?string
     {
         return $this->price;
     }
 
-    public function setprice(string $price): static
+    public function setPrice(string $price): static
     {
         $this->price = $price;
 

@@ -2,22 +2,22 @@
 
 namespace App\Repository;
 
-use App\Entity\Formules;
+use App\Entity\Formule;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Formules>
+ * @extends ServiceEntityRepository<Formule>
  */
-class FormulesRepository extends ServiceEntityRepository
+class FormuleRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Formules::class);
+        parent::__construct($registry, Formule::class);
     }
 
     //    /**
-    //     * @return Formules[] Returns an array of Formules objects
+    //     * @return Formule[] Returns an array of Formule objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class FormulesRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?Formules
+    //    public function findOneBySomeField($value): ?Formule
     //    {
     //        return $this->createQueryBuilder('f')
     //            ->andWhere('f.exampleField = :val')
