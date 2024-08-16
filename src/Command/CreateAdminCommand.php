@@ -2,13 +2,16 @@
 
 namespace App\Command;
 
-use Symfony\Component\Console\Attribute\AsCommand;
+use App\Entity\User;
+use App\Repository\UserRepository;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 #[AsCommand(
     name: 'create-admin',
@@ -18,7 +21,10 @@ class CreateAdminCommand extends Command
 {
     private SymfonyStyle $io;
 
-    public function __construct()
+    public function __construct(
+        private readonly UserRepository $repository,
+        private readonly UserPasswordHasherInterface $hasher
+    )
     {
         parent::__construct();
     }
@@ -49,7 +55,7 @@ class CreateAdminCommand extends Command
 
         $this->io->text('Ajouter un nouvel utilisateur');
         $this->askArgument($input, 'username');
-        $this->askArgument($input, 'password');
+        $this->askArgument($input, 'password', hidden: true);
     }
 
 
@@ -70,19 +76,18 @@ class CreateAdminCommand extends Command
     
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $io = new SymfonyStyle($input, $output);
-        $arg1 = $input->getArgument('arg1');
-
-        if ($arg1) {
-            $io->note(sprintf('Vous avez passé un argument : %s', $arg1));
-        }
-
-        if ($input->getOption('option1')) {
-            // ...
-        }
-
-        $io->success('Vous avez une nouvelle commande ! Personnalisez-la maintenant ! Passez --help pour voir vos options.');
-
+        $username = $input->getArgument('username');
+        $password = $input->getArgument('password');
+    
+        $user = new User();
+        $user->setUsername($username);
+        $user->setPassword($this->hasher->hashPassword($user, $password));
+        $user->setRoles(['ROLE_ADMIN']);
+    
+        $this->repository->save($user);
+    
+        $this->io->success('Administrateur créé avec succès.');
+    
         return Command::SUCCESS;
     }
 }

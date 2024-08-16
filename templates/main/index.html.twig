@@ -6,39 +6,56 @@
 
 
     {# ----------------------------------------------------MAIN---------------------------------------------------- #}
-    <section id="about">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-xs-12">
-                    <div class="text-center">
-                        <div class="section-heading">
-                            <h6 class="left-content">Le Mées</h6>
-                        </div>
-                        <p> Bienvenue chez "LM Le Mées", votre boulangerie-pizzeria située au cœur de la zone d'activité
-                            économique de Mées. </p>
-                        <p>Depuis trois ans, notre équipe de quatre passionnés, comprenant un pizzaïolo expert, vous
-                            propose un
-                            large éventail de délices.</p>
-                        <p>Savourez nos pains frais, pizzas artisanales, sandwiches variés, paninis croustillants et
-                            tacos
-                            gourmands, tous préparés avec des ingredientde qualité.</p>
-                        <p>Notre salade bar vous offre une sélection de crudités fraîches et de sauces maison pour
-                            composer
-                            votre salade sur mesure.</p>
-                        <p>Enfin, laissez-vous tenter par nos gourmandises sucrées, telles que nos viennoiseries,
-                            pâtisseries et entremets</p>
-                        <p>Que vous soyez un employé pressé ou un visiteur curieux, "LM Le Mées" est l'endroit idéal
-                            pour une pause
-                            savoureuse ou un déjeuner convivial.</p>
-                        <p>Venez découvrir notre ambiance chaleureuse et nos saveurs authentiques, où la tradition
-                            rencontre la modernité.</p>
-                        <p>Nous vous acceuillons du lundi au vendredi de 7h30 à 15h30.</p>
-                        <h3>A bientôt chez "LM Le Mées"! </h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="about">
+	<div id="container-block"></div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-xs-12">
+					<div class="text-center">
+						<div class="section-heading">
+							<h3 class="left-content">Le Mées</h3>
+						</div>
+						<p>
+							Bienvenue chez "LM Le Mées", votre boulangerie-pizzeria située au cœur de la zone d'activité
+							économique de Mées.
+						</p>
+						<p> 
+                            Depuis trois ans, notre équipe de quatre passionnés, comprenant un pizzaïolo expert, vous
+							propose un large éventail de délices.
+                        </p>
+						<p> 
+                            Savourez nos pains frais, pizzas artisanales, sandwiches variés, paninis croustillants et
+							tacos gourmands, tous préparés avec des ingredientde qualité.
+                        </p>
+						<p> 
+                            Notre salade bar vous offre une sélection de crudités fraîches et de sauces maison pour
+                            composer votre salade sur mesure.
+                        </p>
+						<p> 
+                            Enfin, laissez-vous tenter par nos gourmandises sucrées, telles que nos viennoiseries,
+							pâtisseries et entremets
+                        </p>
+						<p>
+                            Que vous soyez un employé pressé ou un visiteur curieux, "LM Le Mées" est l'endroit idéal
+							pour une pause savoureuse ou un déjeuner convivial.
+                        </p>
+						<p>
+                            Venez découvrir notre ambiance chaleureuse et nos saveurs authentiques, où la tradition
+							rencontre la modernité.
+                        </p>
+						<p>
+                            Nous vous acceuillons du lundi au vendredi de 7h30 à 15h30.
+                        </p>
+						<h4>
+                            A bientôt chez "LM Le Mées"!
+						</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</section>
+
 
     {# ----------------------------------------------------DISTRIBUTEUR--------------------------------------------------- #}
     <section id="distributeur">
@@ -47,8 +64,8 @@
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="left-text-content">
                         <div class="section-heading">
-                            <h6>Le distributeur à Pizza</h6>
-                            <h2>Parce que le delicieux n'a pas d'heure</h2>
+                            <h3>Le distributeur à Pizza</h3>
+                            <h5>Parce que le delicieux n'a pas d'heure</h5>
                         </div>
                         <div>
                             <p>Pour répondre au mieux à vos besoins, nous avons mis en place un distributeur à pizza qui
@@ -63,7 +80,7 @@
                         </div>
 
                         <div class="section-heading">
-                            <h2>Application Smart-Pizza</h2>
+                            <h5>Application Smart-Pizza</h5>
                             <p>Retrouvez l'application Smart-Pizza disponible sur l'App Store et Google Play.</p>
                             <p>Elle permet  de géolocaliser les distributeurs à proximité et de commanderen ligne.</p>
                         </div>
@@ -84,7 +101,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="right-content">
                         <div class="thumb">
@@ -102,33 +118,33 @@
         <div class="row">
             <div class="col-lg-12 offset-lg-12 text-center">
                 <div class="section-heading">
-                    <h6>Cartes</h6>
+                    <h3>Cartes</h3>
                     <div id="accordion">
                         <div class="accordion">
                             <div class="accordion-item">
                                 <a href="{{ path('app_carte_index') }}"> <img src="{{ asset('assets/images/pizza2.PNG') }}" alt="pizza"></a>
                                 <div class="text-overlay">
-                                    <h3>Pizza
+                                    <h6>Pizza
                                         <a href="{{ path('app_carte_index') }}"></a>
-                                    </h3> 
+                                    </h6> 
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <a href="{{ path('app_carte_index') }}"><img src="{{ asset('assets/images/salade2.png') }}" alt="salade bar"></a>
                                 <div class="text-overlay">
-                                    <h3>Salade Bar</h3>
+                                    <h6>Salade Bar</h6>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <a href="{{ path('app_carte_index') }}"> <img src="{{ asset('assets/images/sandwich.png') }}" alt="snacking"></a>
                                 <div class="text-overlay">
-                                    <h3>Snacking</h3>
+                                    <h6>Snacking</h6>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <a href="{{ path('app_carte_index') }}"> <img src="{{ asset('assets/images/gourmandises.png') }}" alt="Gourmandises"></a>
                                 <div class="text-overlay">
-                                    <h3>Gourmandises</h3>
+                                    <h6>Gourmandises</h6>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +162,7 @@
                 <div class="col-lg-6 align-self-center">
                     <div class="left-text-content">
                         <div class="section-heading">
-                            <h6>Contactez-nous</h6>
+                            <h3>Contactez-nous</h3>
                         </div>
                         <p>Pour toutes questions, n'hésitez pas à nous contacter, nous serons ravis d'y répondre.</p>
                         <div class="row">

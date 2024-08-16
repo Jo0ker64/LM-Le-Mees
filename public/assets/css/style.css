@@ -25,28 +25,32 @@ body {
 section {
   margin: 20px auto;
   background: #E6AB263d;
-  width: 80%;
-  max-width: 1000px;
-  padding: 10px;
+  width: 60%;
   border: 2px solid #E6AB263d;
   border-radius: 10px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.section-heading h6 {
+
+.section-heading h3 {
   font-family: 'peralta', sans-serif;
-  position: relative;
   font-size: 20px;
   color: #E6AB26;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  padding-left: 40px;
 }
 
-.section-heading h2 {
+.section-heading h4 {
   font-family: 'bioRhyme', sans-serif;
-  line-height: 30px;
+  margin: 20px 0 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+}
+
+.section-heading h5 {
+  font-family: 'bioRhyme', sans-serif;
   margin: 20px 0 25px;
   font-size: 16px;
   font-weight: 600;
@@ -141,7 +145,7 @@ nav {
   transform: translate(-50%, -50%);
 }
 
-#banner .left-content h4 {
+#banner .left-content h1 {
   font-family: 'peralta', sans-serif;
   color: #fff;
   font-size: 50px;
@@ -149,7 +153,7 @@ nav {
   
 }
 
-#banner .left-content h6 {
+#banner .left-content h2 {
   font-family: 'peralta', sans-serif;
   font-size: 20px;
   font-weight: 500;
@@ -190,15 +194,15 @@ nav {
 
 #about p {
   font-family: 'bioRhyme', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 5px;
   text-align: justify;
+  padding-left: 30px;
 }
 
 #about h3 {
   font-family:  'bioRhyme', sans-serif;
   font-size: 20px;
-  margin-top: 20px;
 }
 
 
@@ -214,14 +218,17 @@ nav {
   margin-top: 20px;
 }
 
-#distributeur .left-text-content h2 {
+#distributeur .left-text-content h5 {
   font-size: 20px;
+  padding-left: 30px;
 }
 
 #distributeur .left-text-content p {
   font-family: 'bioRhyme', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 5px;
+  text-align: justify;
+  padding-left: 30px;
 }
 
 #distributeur .right-content {
@@ -543,3 +550,5 @@ ul li {
   list-style: none;
   padding-left: 100px;
 }
+
+/*-------------------------------------------Style pour la page de connexion---------------------------------*/

@@ -20,3 +20,6 @@
 ###> symfony/asset-mapper ###
 /assets/vendor/
 ###< symfony/asset-mapper ###
+
+# Ignorer le fichier text.txt
+text.txt
