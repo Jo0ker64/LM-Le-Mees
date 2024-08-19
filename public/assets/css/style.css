@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&family=Vast+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
 
 /* Reset CSS */
@@ -11,7 +10,6 @@
 
 /* Base Styles */
 body {
-  font-family: "arial", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -39,6 +37,7 @@ section {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .section-heading h4 {
@@ -205,13 +204,18 @@ nav {
   font-size: 20px;
 }
 
+#about h4 {
+  font-family:  'bioRhyme', sans-serif;
+  font-size: 20px;
+}
+
 
 /*-------------------------------------------- Distributeur Styles ------------------------------------------*/
 #distributeur {
   padding: 50px 0;
 }
 
-#distributeur img {
+#distributeur  img {
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
@@ -229,6 +233,24 @@ nav {
   margin-bottom: 5px;
   text-align: justify;
   padding-left: 30px;
+}
+
+#distributeur .app-image img {
+  width: 20%; 
+  margin: 0 auto;
+  display: block;
+}
+
+#distributeur .store-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#distributeur .store-links img {
+  width: 150px; 
 }
 
 #distributeur .right-content {
@@ -394,11 +416,12 @@ nav {
 }
 
 #map {
-  width: 100%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  margin-left: 100px;
 }
 
 .box {
@@ -490,30 +513,152 @@ footer {
 
 /* -----------------------------------------------Style pour la carte------------------------------- */
 
+#cartes {
+  position: relative;
+  background-size: cover;
+  color: white; 
+}
+
+#cartes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/images/menu.jpg')!important;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; 
+  z-index: 1;
+}
+
+#cartes .content {
+  position: relative;
+  z-index: 2; 
+}
+
+#salade {
+  position: relative;
+  background-size: cover;
+  color: white; 
+}
+
+#salade::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/images/saladebar.jpg')!important;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; 
+  z-index: 1;
+}
+
+#salade .content {
+  position: relative;
+  z-index: 2; 
+}
+
+#snack {
+  position: relative;
+  background-size: cover;
+  color: white; 
+}
+
+#snack::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/images/snack.jpg')!important;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; 
+  z-index: 1;
+}
+
+#snack .content {
+  position: relative;
+  z-index: 2; 
+}
+
+#pizza{
+  position: relative;
+  background-size: cover;
+  color: white; 
+}
+
+#pizza::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/images/pizza.jpg')!important;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; 
+  z-index: 1;
+}
+
+#pizza .content {
+  position: relative;
+  z-index: 2; 
+}
+
+#dessert {
+  position: relative;
+  background-size: cover;
+  color: white; 
+}
+
+#dessert::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/images/dessert.jpg')!important;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; 
+  z-index: 1;
+}
+
+#dessert .content {
+  position: relative;
+  z-index: 2; 
+}
+
 .category {
   display: block;
   position: relative;
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  height: 400px;
+  height: auto;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 }
 
 .category .overlay {
   font-family: 'bioRhyme', sans-serif;
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #E6AB263d;
   color: #000;
-  padding: 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -527,28 +672,33 @@ footer {
   font-size: 32px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
-.category ul li {
-  list-style: none;
-  padding-left: 30px;
-  
+.category ul {
+  padding-left: 20px; 
+  list-style-position: inside;
+  list-style: none; 
 }
 
 .category li {
-  margin-bottom: 15px;
+  margin-bottom: 5px; /* Espacement entre chaque élément de la liste */
   font-size: 14px;
+  text-align: left;
+  position: relative;
 }
 
-.category p {
-  margin-top: 20px;
-  font-size: 14px;
+.category li::before {
+  content: "-"; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #000; /* Couleur de la puce */
 }
 
-ul li {
-  list-style: none;
-  padding-left: 100px;
-}
+
+
+
 
 /*-------------------------------------------Style pour la page de connexion---------------------------------*/

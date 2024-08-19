@@ -6,9 +6,8 @@
 
     {# ----------------------------------------------------MAIN---------------------------------------------------- #}
 
-
     <main>
-        <div class="category">
+        <div class="category" id="cartes" alt="formules">
             <div class="overlay">
                 <h2>Les Formule</h2>
                 <ul>
@@ -21,7 +20,7 @@
             </div>
         </div>
 
-        <div class="category">    
+        <div class="category" id="salade">    
             <div class="overlay">
                 <h2>Salade Bar</h2>
                 <ul>
@@ -33,7 +32,7 @@
             </div>  
         </div>
 
-        <div class="category">
+        <div class="category" id="snack">
             <div class="overlay">
                 <h2>Snacking</h2>
                 <ul>
@@ -44,7 +43,7 @@
             </div>
         </div>
 
-        <div class="category">
+        <div class="category" id="pizza">
             <div class="overlay">
                 <h2>Pizzas base tomate</h2>
                 <ul>
@@ -52,22 +51,12 @@
                         <li>{{ pizzaTomate.title }} : {{ pizzaTomate.ingredient}} <b>{{ pizzaTomate.price }}€</b></li>
                     {% endfor %}
                 </ul>
-            </div>
-        </div>
-
-        <div class="category">
-            <div class="overlay">
                 <h2>Pizzas base crème</h2>
                 <ul>
                     {% for pizzaCreme in pizzaCremes %}
                         <li>{{ pizzaCreme.title }} : {{ pizzaCreme.ingredient}} <b>{{ pizzaCreme.price }}€</b></li>
                     {% endfor %}
                 </ul>
-            </div>
-        </div>
-
-        <div class="category">
-            <div class="overlay">
                 <h2>Pizzas chef</h2>
                 <ul>
                     {% for pizzaChef in pizzaChefs %}
@@ -77,7 +66,7 @@
             </div>
         </div>
 
-        <div class="category">
+        <div class="category" id="dessert">
             <div class="overlay">
                 <h2>Gourmandises</h2>
                 <ul>
