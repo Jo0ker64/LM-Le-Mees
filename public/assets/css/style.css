@@ -115,6 +115,54 @@ nav {
 
 
 /* ----------------------------------------Menu Hamburger Styles---------------------------------- */
+.hamburger {
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg);
+      transform-origin: 10% 10%;
+  }
+
+  .hamburger.active span:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg);
+      transform-origin: 10% 90%;
+  }
+
+  .navbar-links.show {
+      display: flex;
+  }
+}
+
 
 
 /* ------------------------------------------Banner Styles------------------------------------- */
@@ -247,6 +295,12 @@ nav {
   width: 150px;
 }
 
+@media (max-width: 768px) {
+  #distributeur .store-links img {
+    width: 80px;
+  }
+}
+
 #distributeur .right-content {
   margin-left: 30px;
 }
@@ -292,6 +346,16 @@ nav {
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
+}
+@media (max-width: 768px) {
+  #accordion {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .accordion-item {
+    flex: 1;
+  }
 }
 
 .accordion-item:hover {
@@ -410,12 +474,19 @@ nav {
 }
 
 #map {
-  width: 80%;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
   margin-left: 100px;
+}
+
+@media (max-width: 768px) {
+  #map {
+    margin-left: 0;
+  }
 }
 
 .box {
@@ -429,6 +500,8 @@ nav {
   width: 300px;
   height: 100px;
 }
+
+
 
 
 /* -----------------------------------------------Footer Styles --------------------------------------------------*/

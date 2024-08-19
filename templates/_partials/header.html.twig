@@ -22,6 +22,11 @@
 			<div class="navbar-logo">
 				<img src="{{ asset('assets/images/logo1.webp') }}" alt="Logo LM Le Mées">
 			</div>
+			<div id="menu-toggle" class="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 			<div class="navbar-links">
 				<a href=" {{ path('app_homepage') }} ">Accueil</a>
 				<a href=" {{ path('app_homepage') }}#distributeur ">Le distributeur à pizza</a>
@@ -71,5 +76,7 @@
 				</div>
 			</div>
 		</div>
+
+		<script src="{{ asset('assets/js/burger.js') }}"></script>	
 	</body>
 </html>
