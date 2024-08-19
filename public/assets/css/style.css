@@ -29,7 +29,6 @@ section {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-
 .section-heading h3 {
   font-family: 'peralta', sans-serif;
   font-size: 20px;
@@ -40,14 +39,7 @@ section {
   text-align: center;
 }
 
-.section-heading h4 {
-  font-family: 'bioRhyme', sans-serif;
-  margin: 20px 0 25px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #666;
-}
-
+.section-heading h4,
 .section-heading h5 {
   font-family: 'bioRhyme', sans-serif;
   margin: 20px 0 25px;
@@ -55,6 +47,7 @@ section {
   font-weight: 600;
   color: #666;
 }
+
 
 nav {
   display: flex;
@@ -120,6 +113,7 @@ nav {
   display: block;
 }
 
+
 /* ----------------------------------------Menu Hamburger Styles---------------------------------- */
 
 
@@ -149,7 +143,7 @@ nav {
   color: #fff;
   font-size: 50px;
   font-weight: 600;
-  
+
 }
 
 #banner .left-content h2 {
@@ -200,12 +194,12 @@ nav {
 }
 
 #about h3 {
-  font-family:  'bioRhyme', sans-serif;
+  font-family: 'bioRhyme', sans-serif;
   font-size: 20px;
 }
 
 #about h4 {
-  font-family:  'bioRhyme', sans-serif;
+  font-family: 'bioRhyme', sans-serif;
   font-size: 20px;
 }
 
@@ -215,7 +209,7 @@ nav {
   padding: 50px 0;
 }
 
-#distributeur  img {
+#distributeur img {
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
@@ -236,7 +230,7 @@ nav {
 }
 
 #distributeur .app-image img {
-  width: 20%; 
+  width: 20%;
   margin: 0 auto;
   display: block;
 }
@@ -250,7 +244,7 @@ nav {
 }
 
 #distributeur .store-links img {
-  width: 150px; 
+  width: 150px;
 }
 
 #distributeur .right-content {
@@ -315,7 +309,7 @@ nav {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-.small{
+.small {
   font-size: 10px;
 }
 
@@ -323,7 +317,7 @@ nav {
 #contact {
   margin-bottom: 40px;
   padding: 50px 0;
-  background-image: url('/assets/images/contact-bg.jpg')!important;
+  background-image: url('/assets/images/contact-bg.webp') !important;
 }
 
 #contact .section-heading h6 {
@@ -428,9 +422,9 @@ nav {
   background-color: white;
   border: 2px solid #e0e0e0;
   padding: 15px;
-  border-radius: 5px; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  margin-bottom: 20px; 
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
   margin-left: 100px;
   width: 300px;
   height: 100px;
@@ -513,110 +507,56 @@ footer {
 
 /* -----------------------------------------------Style pour la carte------------------------------- */
 
-#cartes {
-  position: relative;
-  background-size: cover;
-  color: white; 
-}
-
-#cartes::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('/assets/images/menu.jpg')!important;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.2; 
-  z-index: 1;
-}
-
-#cartes .content {
-  position: relative;
-  z-index: 2; 
-}
-
-#salade {
-  position: relative;
-  background-size: cover;
-  color: white; 
-}
-
-#salade::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('/assets/images/saladebar.jpg')!important;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.2; 
-  z-index: 1;
-}
-
-#salade .content {
-  position: relative;
-  z-index: 2; 
-}
-
-#snack {
-  position: relative;
-  background-size: cover;
-  color: white; 
-}
-
-#snack::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('/assets/images/snack.jpg')!important;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.2; 
-  z-index: 1;
-}
-
-#snack .content {
-  position: relative;
-  z-index: 2; 
-}
-
-#pizza{
-  position: relative;
-  background-size: cover;
-  color: white; 
-}
-
-#pizza::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('/assets/images/pizza.jpg')!important;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.2; 
-  z-index: 1;
-}
-
-#pizza .content {
-  position: relative;
-  z-index: 2; 
-}
-
+#cartes,
+#salade,
+#snack, 
+#pizza, 
 #dessert {
   position: relative;
   background-size: cover;
-  color: white; 
+  color: white;
+}
+
+#cartes::before,
+#salade::before,
+#snack::before,
+#pizza::before,
+#dessert::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+#cartes .content,
+#salade .content,
+#snack .content,
+#pizza .content,
+#dessert .content {
+  position: relative;
+  z-index: 2;
+}
+
+#cartes::before {
+  background-image: url('/assets/images/carte.webp') !important;
+}
+
+#salade::before {
+  background-image: url('/assets/images/saladebar.webp') !important;
+}
+
+#snack::before {
+  background-image: url('/assets/images/snack.webp') !important;
+}
+
+#pizza::before {
+  background-image: url('/assets/images/pizza.webp') !important;
 }
 
 #dessert::before {
@@ -626,17 +566,13 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/assets/images/dessert.jpg')!important;
+  background-image: url('/assets/images/dessert.webp') !important;
   background-size: cover;
   background-position: center;
-  opacity: 0.2; 
+  opacity: 0.2;
   z-index: 1;
 }
 
-#dessert .content {
-  position: relative;
-  z-index: 2; 
-}
 
 .category {
   display: block;
@@ -677,28 +613,22 @@ footer {
 }
 
 .category ul {
-  padding-left: 20px; 
+  padding-left: 20px;
   list-style-position: inside;
-  list-style: none; 
+  list-style: none;
 }
 
 .category li {
-  margin-bottom: 5px; /* Espacement entre chaque élément de la liste */
+  margin-bottom: 5px;
   font-size: 14px;
   text-align: left;
   position: relative;
 }
 
 .category li::before {
-  content: "-"; 
+  content: "-";
   position: absolute;
   left: 0;
   top: 0;
-  color: #000; /* Couleur de la puce */
+  color: #000;
 }
-
-
-
-
-
-/*-------------------------------------------Style pour la page de connexion---------------------------------*/
